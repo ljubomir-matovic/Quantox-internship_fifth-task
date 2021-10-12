@@ -4,6 +4,7 @@ var toggle = {};
         this.themes = ["theme1", "theme2", "theme3"];
         this.BODY = document.querySelector("body").classList;
         this.localStorage = window.localStorage;
+	if(this.localStorage.getItem("currentTheme")!==null)
 	this.localStorage.setItem("currentTheme",0);
         /** Change current theme
         * @param e Event
