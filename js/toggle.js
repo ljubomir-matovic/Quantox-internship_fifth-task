@@ -3,15 +3,18 @@ var toggle = {};
     function () {
         this.themes = ["theme1", "theme2", "theme3"];
         this.BODY = document.querySelector("body").classList;
-        this.currentTheme = 0;
+        this.localStorage = window.localStorage;
+	this.localStorage.setItem("currentTheme",0);
         /** Change current theme
         * @param e Event
         * @return undefined
         */
         this.toggleHandler = (e) => {
-            this.BODY.remove(this.themes[this.currentTheme]);
-            this.currentTheme = (this.currentTheme + 1) % this.themes.length;
-            this.BODY.add(this.themes[this.currentTheme]);
+	    let currentTheme=this.localStorage.getItem("currentTheme");
+            this.BODY.remove(this.themes[currentTheme]);
+            currentTheme = (currentTheme + 1) % this.themes.length;
+            this.BODY.add(this.themes[currentTheme]);
+	    this.localStorage.setItem("currentTheme",currentTheme);
         };
     }
 ).apply(toggle);
