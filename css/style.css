@@ -80,7 +80,7 @@ header {
 .circle {
     border-radius: 50%;
     background-color: var(--submit-button-background);
-    visibility: hidden;
+    opacity:0;
 }
 .circle:hover,
 .bar:hover .circle {

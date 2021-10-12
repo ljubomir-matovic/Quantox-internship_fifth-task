@@ -104,7 +104,9 @@ var calculator = {};
                 }
                 let n = num.reduce((previous, current) => previous + current, 0);
                 //console.log(this.INPUT.value + `=${n}`);
-                this.INPUT.value = n.toFixed(2);
+                if(Math.abs(n-parseInt(n))<0.005)
+                this.INPUT.value = parseInt(n);
+		else this.INPUT.value = n.toFixed(2);
             }
             catch (err) {
                 this.INPUT.value = "ERR";

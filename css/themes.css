@@ -22,7 +22,7 @@
     --submit-hover-shadow: hsl(6, 70%, 34%);
 }
 .theme1 .circle:first-of-type {
-    visibility: visible;
+    opacity:1;
 }
 
 /*Theme 2*/
@@ -49,7 +49,7 @@
     --submit-hover-shadow: hsl(25, 99%, 27%);
 }
 .theme2 .circle:nth-of-type(2) {
-    visibility: visible;
+    opacity:1;
 }
 
 /*Theme 3*/
@@ -76,5 +76,5 @@
     --submit-hover-shadow: hsl(176, 93%, 70%);
 }
 .theme3 .circle:last-of-type {
-    visibility: visible;
+    opacity:1;
 }
